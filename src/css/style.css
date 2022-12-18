@@ -1,0 +1,21 @@
+@import './style-reset.css';
+@import './style-color.css';
+@import './style-common.css';
+@import './style-font.css';
+
+.wrapper-input-output {
+    margin: 4% 10%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px;
+}
+
+@media screen and (max-width: 1201px) {
+    .wrapper-input-output {
+        flex-direction: column;
+        gap: 100px;
+    }
+}

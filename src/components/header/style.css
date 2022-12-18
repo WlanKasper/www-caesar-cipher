@@ -1,0 +1,17 @@
+header {
+    margin: 28px 42px;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.wrapper-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 25px;
+}

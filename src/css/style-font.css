@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+textarea,
+input {
+    width: fit-content;
+
+    font-family: 'Combo', cursive;
+    color: var(--text-main);
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 21px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    font-size: 21px;
+}
+
+input {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 651px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    textarea {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+    text-decoration-color: var(--page-accent);
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: var(--page-accent);
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.color-main {
+    color: var(--text-main);
+}
+
+.color-main-extend {
+    color: var(--text-main-extend);
+}
+
+.color-accent {
+    color: var(--text-accent);
+}

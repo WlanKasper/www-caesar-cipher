@@ -1,9 +1,16 @@
-function App() {
+import "./css/style.css";
+
+import Header from "./components/header/Header";
+import PageCipher from "./pages/PageCipher";
+// import PageBruteForce from "./pages/PageBruteForce";
+
+const App = props => {
   return (
     <div className="App">
-     <h1>
-        Hello World
-     </h1>
+      <Header /> 
+
+      <PageCipher />
+      {/* <PageBruteForce /> */}
     </div>
   );
 }
