@@ -4,3 +4,7 @@
   npm install
   npm start
 ```
+## Visualisation of all dummies:
+```
+Server logs
+```
