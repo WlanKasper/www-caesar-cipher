@@ -1,6 +1,6 @@
 div.wrapper-input {
     width: 42%;
-    
+
     display: flex;
     flex-direction: column;
 }
@@ -53,6 +53,7 @@ div.wrapper-action-input {
 }
 
 @media screen and (max-width: 651px) {
+
     textarea,
     div.wrapper-action-input {
         padding: 25px 15px;
@@ -116,4 +117,29 @@ button {
 button:hover,
 button:active {
     background-color: var(--page-background);
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.textarea-loading:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    z-index: 100;;
+    margin-top: -50px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border: 5px solid var(--page-accent);
+    border-top-color:  var(--page-background);
+    border-right-color: var(--page-accent);
+    border-bottom-color:  var(--page-background);
+    animation: spinner 3s linear infinite;
 }

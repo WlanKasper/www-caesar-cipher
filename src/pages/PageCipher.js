@@ -24,6 +24,8 @@ const PageCipher = () => {
 
 
     useEffect(() => {
+        console.log('cipher fierd');
+        console.log(text2);
         if (text2 === '' || key === '') {
             return;
         }
@@ -41,6 +43,8 @@ const PageCipher = () => {
     }, [text2, key]);
 
     useEffect(() => {
+        console.log('decipher fierd');
+        console.log(text1);
         if (text1 === '' || key === '') {
             return;
         }

@@ -62,7 +62,7 @@ function bruteforce(message) {
         console.log(isDecrypted);
         console.log(decryptedMessage);
 
-        if (calculateTruePercentage(isDecrypted) > 80) {
+        if (calculateTruePercentage(isDecrypted) > 70) {
             return {
                 'key': key,
                 'message': decryptedMessage,

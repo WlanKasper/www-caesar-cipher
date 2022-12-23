@@ -7,6 +7,7 @@ import axios from "../utils/axios";
 const PageCipher = () => {
     const [text2, setText2] = useState('');
     const [textResponse2, setTextResponse2] = useState('');
+    const [status, setStatus] = useState('');
 
     const handleChangeCipher = (event) => {
         setText2(event.detail.value);
@@ -16,6 +17,7 @@ const PageCipher = () => {
         if (text2 === '') {
             return;
         }
+        setStatus('textarea-loading');
 
         axios.get("/api/bruteforce", {
             params: {
@@ -28,6 +30,7 @@ const PageCipher = () => {
                 } else {
                     setTextResponse2(`Message: ${response.data.message}\n\nKey: ${response.data.key}`);
                 }
+                setStatus('');
             })
             .catch(error => console.error(error))
     }, [text2]);
@@ -40,12 +43,14 @@ const PageCipher = () => {
             button={bruteForce[0].button}
             sendText={handleChangeCipher}
         />
+        <div className={status}></div>
         <Textarea
             key={1}
             textarea={bruteForce[1].textarea}
             textareaValue={textResponse2}
             keyInput={bruteForce[1].keyInput}
             button={bruteForce[1].button}
+            statusLoading={status}
         />
     </div>);
 }
