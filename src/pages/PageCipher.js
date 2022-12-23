@@ -12,6 +12,7 @@ const PageCipher = () => {
     const [key, setKey] = useState('1');
 
     const handleChangeCipher = (event) => {
+        setText1('');
         setText2(event.detail.value);
         setKey(event.detail.key);
 
@@ -19,13 +20,12 @@ const PageCipher = () => {
 
     const handleChangeDecipher = (event) => {
         setText1(event.detail.value);
+        setText2('');
         setKey(event.detail.key);
     };
 
 
     useEffect(() => {
-        console.log('cipher fierd');
-        console.log(text2);
         if (text2 === '' || key === '') {
             return;
         }
@@ -43,8 +43,6 @@ const PageCipher = () => {
     }, [text2, key]);
 
     useEffect(() => {
-        console.log('decipher fierd');
-        console.log(text1);
         if (text1 === '' || key === '') {
             return;
         }

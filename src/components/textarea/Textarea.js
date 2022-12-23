@@ -11,8 +11,8 @@ const Textarea = ({ textarea, textareaValue, keyInput, keyValue, button, sendTex
             'value': text,
             'key': key,
         }
-        setText('');
         sendText(event);
+        // setText('');
     };
 
     useEffect(() => {
