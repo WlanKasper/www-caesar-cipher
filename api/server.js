@@ -77,7 +77,7 @@ function bruteforce(message) {
 
 function isValidEnglish(message) {
     const data = readTextFile('./english.txt');
-    const list = data.split('\n');
+    const list = data.split(' ');
 
     for (let i = 0; i < list.length; i++) {
         if (list[i] === message) {
@@ -90,7 +90,7 @@ function isValidEnglish(message) {
 
 function isValidItalian(message) {
     const data = readTextFile('./italian.txt');
-    const list = data.split('\n');
+    const list = data.split(' ');
 
     for (let i = 0; i < list.length; i++) {
         if (list[i] === message) {
