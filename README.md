@@ -1,8 +1,6 @@
-## You may serve it with a static server:
+# How to build:
 ```
-  npm install -g serve
-  serve -s build
+  cd www-caesar-cipher
+  npm install
+  npm start
 ```
-### Find out more about deployment here:
-
-  https://cra.link/deployment
