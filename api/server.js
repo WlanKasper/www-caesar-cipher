@@ -54,15 +54,17 @@ function bruteforce(message) {
         const isDecrypted = Array.from({ length: decryptedWords.length }, () => false);;
 
         for (let i = 0; i < decryptedWords.length; i++) {
-            if (isValidEnglish(decryptedWords[i])) {
+            if (isValidEnglish(decryptedWords[i]) || isValidItalian(decryptedWords[i])) {
                 isDecrypted[i] = true;
             }
         }
 
-        console.log(isDecrypted);
+        console.log(`----------${key + 1}----------`);
         console.log(decryptedMessage);
+        console.log(isDecrypted);
+        console.log();
 
-        if (calculateTruePercentage(isDecrypted) > 70) {
+        if (calculateTruePercentage(isDecrypted) > 60) {
             return {
                 'key': key,
                 'message': decryptedMessage,
@@ -78,7 +80,20 @@ function isValidEnglish(message) {
     const list = data.split('\n');
 
     for (let i = 0; i < list.length; i++) {
-        if (list[i].toLowerCase() === message) {
+        if (list[i] === message) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function isValidItalian(message) {
+    const data = readTextFile('./italian.txt');
+    const list = data.split('\n');
+
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] === message) {
             return true;
         }
     }
